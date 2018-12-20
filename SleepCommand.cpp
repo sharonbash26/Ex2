@@ -3,6 +3,9 @@
 //
 
 #include "SleepCommand.h"
+#include <chrono>
+#include <thread>
+
 int SleepCommand::execute(){
-    return 3;
+std::this_thread::sleep_for(std::chrono::operator""s(10));
 }

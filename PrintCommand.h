@@ -7,9 +7,12 @@
 
 
 class PrintCommand {
+    std::string myString;
 public:
-    int execute() override ;
+    PrintCommand(std::string myString);
+    int execute() ;
 };
+
 
 
 
