@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 
     char buffer[256];
     strcpy(buffer,"set /controls/flight/rudder 1");
-    strcat(buffer,"\r\n");
+    strcat(buffer,"\r\n\r\n");
 
 
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
     server = gethostbyname("127.0.0.1");
 
     if (server == NULL) {
-        fprintf(stderr,"ERROR, no such host\n");
+        fprintf(stderr,"ERROR, no such host \n");
         exit(0);
     }
 
@@ -52,8 +52,8 @@ int main(int argc, char *argv[]) {
     */
 
     printf("Please enter the message: ");
-    bzero(buffer,256);
-    fgets(buffer,255,stdin);
+    //bzero(buffer,256);
+    //fgets(buffer,255,stdin);
     /* Send message to the server */
     n = write(sockfd, buffer, strlen(buffer));
 
