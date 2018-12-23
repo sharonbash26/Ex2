@@ -7,5 +7,6 @@
 #include <thread>
 
 int SleepCommand::execute(){
-std::this_thread::sleep_for(std::chrono::operator""s(10));
+    double time=stod(this->operand1);
+std::this_thread::sleep_for(std::chrono::operator""s(time));
 }

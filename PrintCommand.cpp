@@ -5,10 +5,7 @@
 #include <iostream>
 #include <string>
 #include "PrintCommand.h"
-PrintCommand::PrintCommand(std::string myString){
-        this->myString=myString;
-}
 
 int PrintCommand::execute(){
-    std:: cout  << this->myString;
+    std:: cout  << this->operand1;
 }

@@ -7,10 +7,14 @@
 
 
 class PrintCommand {
-    std::string myString;
+    std::string operand1;
+    std::string operand2;
+
 public:
-    PrintCommand(std::string myString);
     int execute() ;
+    void getFirstArgument(std::string arg){this->operand1 = arg;}
+    void getSecondArgument(std::string arg){}
+    void getThirdArgument(std::string arg){}
 };
 
 
