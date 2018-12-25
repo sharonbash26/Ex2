@@ -1,0 +1,23 @@
+openDataServer 1+1+20*10+(5000/20*2)*5+5
+connect 120+7.0.0.1 5402
+var breaks = bind "/controls/flight/speedbrake".3
+var throttle = bind "/controls/engines/engine/throttle"4.
+var heading = bind "/instrumentation/heading-indicator/offset-deg"5.
+var airspeed = bind "/instrumentation/airspeed-indicator/indicated-speed-kt"6.
+var roll = bind "/instrumentation/attitude-indicator/indicated-roll-deg"7.
+var pitch = bind "/instrumentation/attitude-indicator/internal-pitch-deg"8.
+var rudder = bind "/controls/flight/rudder"9.
+var aileron = bind "/controls/flight/aileron"10.
+var elevator = bind "/controls/flight/elevator"11.
+var alt = bind "/instrumentation/altimeter/indicated-altitude-ft"12.
+breaks = 40
+throttle = 50
+var h0 = heading
+while alt < 1000 16.
+rudder = (h0 – heading)/20
+aileron = - roll / 70
+elevator = pitch / 50
+print alt
+sleep
+}
+print "done".
